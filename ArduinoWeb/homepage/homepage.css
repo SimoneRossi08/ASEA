@@ -1,0 +1,38 @@
+body{
+    background-color: rgb(31, 31, 31);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar{
+    background-color: rgb(32, 32, 94);
+    padding: 20px 0;
+    text-align: center;
+}
+
+#navbar h2{
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    margin: 0;
+}
+/* Stile per la div che contiene i paragrafi */
+#intro{
+    background-image: url('https://via.placeholder.com/1200x800'); /* Aggiungi l'URL dell'immagine di sfondo */
+    background-size: cover; /* Assicura che l'immagine copra tutta la div */
+    background-position: center; /* Centra l'immagine */
+    color: white; /* Colore del testo */
+}
+
+#intro p{
+    font-size: 18px;
+    line-height: 0.5;
+    margin-left: 70px;
+    padding: 0;
+}
+#intro h1{
+    font-size: 50px;
+    line-height: 0.6;
+    margin-left: 70px;
+    padding: 0;
+}
