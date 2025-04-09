@@ -8,31 +8,48 @@ body{
 #navbar{
     background-color: rgb(32, 32, 94);
     padding: 20px 0;
-    text-align: center;
 }
 
 #navbar h2{
     color: rgb(255, 255, 255);
-    font-size: 24px;
+    font-size: 40px;
+    text-align: center;
     margin: 0;
 }
-/* Stile per la div che contiene i paragrafi */
+
+#right-panel a{
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    margin-left: 1700px;
+    margin-top: -39px;
+    float:left;
+}
+
 #intro{
     background-image: url('https://via.placeholder.com/1200x800'); /* Aggiungi l'URL dell'immagine di sfondo */
     background-size: cover; /* Assicura che l'immagine copra tutta la div */
-    background-position: center; /* Centra l'immagine */
-    color: white; /* Colore del testo */
+    background-position: center;
+    color: white;
 }
 
 #intro p{
     font-size: 18px;
     line-height: 0.5;
     margin-left: 70px;
-    padding: 0;
 }
 #intro h1{
     font-size: 50px;
     line-height: 0.6;
     margin-left: 70px;
-    padding: 0;
+}
+
+#temp p{
+    font-size: 18px;
+    line-height: 0.5;
+    margin-left: 70px;
+}
+#temp h1{
+    font-size: 20px;
+    line-height: 0.6;
+    margin-left: 70px;
 }
