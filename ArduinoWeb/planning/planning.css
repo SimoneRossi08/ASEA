@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(31, 31, 31);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar{
+    background-color: rgb(32, 32, 94);
+    padding: 20px 0;
+}
+
+#navbar h2{
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    text-align: center;
+    margin: 0;
+}
+
+#right-panel a{
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    margin-left: 1700px;
+    margin-top: -39px;
+    float:left;
+}
