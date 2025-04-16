@@ -44,12 +44,12 @@ body{
 }
 
 #temp p{
-    font-size: 18px;
+    font-size: 16px;
     line-height: 0.5;
-    margin-left: 70px;
+    margin-left: 80px;
 }
-#temp h1{
+#temp h2{
     font-size: 20px;
     line-height: 0.6;
-    margin-left: 70px;
+    margin-left: 80px;
 }
