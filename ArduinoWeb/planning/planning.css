@@ -24,3 +24,34 @@ body{
     margin-top: -39px;
     float:left;
 }
+
+#footer{
+    background-color: rgb(32, 32, 94);
+    padding: 20px 0;
+    position: relative;
+}
+#footer h2{
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    text-align: left;
+    margin-left: 50px;
+    display: inline-block;
+}
+
+#credits{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    text-align: left;
+    left: 200px;
+    bottom: 40px;
+    line-height: 0.5;
+    position: absolute;
+}
+
+#rights{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    right: 80px;
+    bottom: 40px;
+    position: absolute;
+}

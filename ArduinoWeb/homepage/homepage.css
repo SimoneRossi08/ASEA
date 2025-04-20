@@ -47,9 +47,83 @@ body{
     font-size: 16px;
     line-height: 0.5;
     margin-left: 80px;
+    color: white;
 }
 #temp h2{
     font-size: 20px;
     line-height: 0.6;
     margin-left: 80px;
+    color: white;
+}
+
+#umid p{
+    font-size: 16px;
+    line-height: 0.5;
+    color: white;
+    text-align: right;
+    margin-right: 80px;
+}
+#umid h2{
+    font-size: 20px;
+    line-height: 0.6;
+    color: white;
+    text-align: right;
+    margin-right: 80px;
+}
+
+#radar p{
+    font-size: 16px;
+    line-height: 0.5;
+    margin-left: 80px;
+    color: white;
+}
+#radar h2{
+    font-size: 20px;
+    line-height: 0.6;
+    margin-left: 80px;
+    color: white;
+}
+
+#fotor p{
+    font-size: 16px;
+    line-height: 0.5;
+    color: white;
+    text-align: right;
+    margin-right: 80px;
+}
+#fotor h2{
+    font-size: 20px;
+    line-height: 0.6;
+    color: white;
+    text-align: right;
+    margin-right: 80px;
+}
+
+#footer{
+    background-color: rgb(32, 32, 94);
+    padding: 20px 0;
+}
+#footer h2{
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    text-align: left;
+    margin-left: 50px;
+}
+
+#credits{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    text-align: left;
+    left: 200px;
+    bottom: -115px;
+    line-height: 0.5;
+    position: absolute;
+}
+
+#rights{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    right: 80px;
+    bottom: -110px;
+    position: absolute;
 }
