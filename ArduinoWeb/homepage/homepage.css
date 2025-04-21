@@ -91,13 +91,6 @@ body{
     text-align: right;
     margin-right: 80px;
 }
-#fotor h2{
-    font-size: 20px;
-    line-height: 0.6;
-    color: white;
-    text-align: right;
-    margin-right: 80px;
-}
 
 #footer{
     background-color: rgb(32, 32, 94);
@@ -117,7 +110,7 @@ body{
     left: 200px;
     bottom: -115px;
     line-height: 0.5;
-    position: absolute;
+    position: relative;
 }
 
 #rights{
@@ -125,5 +118,5 @@ body{
     font-size: 20px;
     right: 80px;
     bottom: -110px;
-    position: absolute;
+    position: relative;
 }

@@ -25,6 +25,31 @@ body{
     float:left;
 }
 
+#code{
+    font-family: "Courier New", monospace;
+    color: rgb(255, 255, 255);
+    background-color: #3a3a3a;
+    margin: 0 40px;
+    padding: 0;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+#code pre {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+  
+#code code {
+    display: block;
+    text-align: left;
+    white-space: pre;
+    padding: 0;
+    margin: 0;
+}
+
 #footer{
     background-color: rgb(32, 32, 94);
     padding: 20px 0;

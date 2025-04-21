@@ -25,7 +25,172 @@
             <img inserire immagine>
         </div><br><br>
         <div id="code">
-            <code>inserire codice</code>
+            <pre><code class="language-cpp">
+                #include <Servo.h>
+                #include <LiquidCrystal.h>
+                #include <DHT.h>
+                    
+                #define DHTPIN 10     // Pin collegato al sensore DHT
+                #define DHTTYPE DHT11 // Tipo di sensore DHT
+                    
+                DHT dht(DHTPIN, DHTTYPE);
+                    
+                const int trigPin = 12; // Pin trigger del sensore
+                const int echoPin = 13; // Pin echo del sensore
+                const int moteur = 11;  // Pin del servo motore
+                const int buttonPin = 9; // Pulsante per cambiare opzione
+                    
+                // LCD
+                LiquidCrystal lcd(3, 4, 5, 6, 7, 8);
+                Servo myservo;
+                    
+                // Variabili
+                int selectedOption = 0; // Opzione selezionata
+                bool buttonPressed = false; // MODIFICA
+                unsigned long lastDebounceTime = 0; // Per evitare rimbalzi del pulsante
+                const unsigned long debounceDelay = 200;
+                int pos = 0; // Posizione del servo motore
+                    
+                void setup() {
+                    // Configura LCD
+                    lcd.begin(16, 2);
+                    lcd.clear();
+                        
+                    pinMode(buttonPin, INPUT);
+                        
+                    // Configura il servo e i pin del sensore
+                    myservo.attach(moteur);
+                    pinMode(trigPin, OUTPUT);
+                    pinMode(echoPin, INPUT);
+                    
+                    // Configura il contrasto (opzionale)
+                    analogWrite(2, 25);
+                    
+                    // Inizializzazione del sensore di temperatura
+                    dht.begin();
+                    
+                    // Comunicazione seriale per debug
+                    Serial.begin(9600);
+                    Serial.println("Sistema pronto. Premi il pulsante per scorrere.");
+                    
+                    // Mostra il menu iniziale
+                    displayMenu();
+                }
+                    
+                void loop() {
+                    // Leggi lo stato del pulsante
+                    if (digitalRead(buttonPin) == HIGH && (millis() - lastDebounceTime) > debounceDelay && !buttonPressed) {
+                    lastDebounceTime = millis();
+                    buttonPressed = true; // Segnala che il pulsante è stato premuto
+                    
+                    // Cambia opzione manualmente
+                    selectedOption++;
+                    if (selectedOption > 3) selectedOption = 0; // Torna al menu dopo l'ultima opzione
+                    
+                    // Mostra il menu o esegue un'azione
+                    if (selectedOption == 0) {
+                          displayMenu();
+                    } else {
+                        executeOption(selectedOption);
+                    }
+                }
+                      
+                // Rilascia il pulsante (attesa per il prossimo input)
+                if (digitalRead(buttonPin) == LOW) {
+                buttonPressed = false;
+                    }
+                }
+                    
+                void displayMenu() {
+                    lcd.clear();
+                    lcd.setCursor(0, 0);
+                    lcd.print("MENU:");
+                    lcd.setCursor(0, 1);
+                    lcd.print("1.Temp 2.Lum 3.Radar");
+                    Serial.println("Menu visualizzato.");
+                }
+                    
+                void executeOption(int option) {
+                    switch (option) {
+                    case 1:
+                        displayTempHumidity();
+                        break;
+                    case 2:
+                        displayLuminosity();
+                        break;
+                    case 3:
+                        displayRadar();
+                        break;
+                    default:
+                        lcd.clear();
+                        lcd.setCursor(0, 0);
+                        lcd.print("Errore opzione!");
+                    }
+                }
+                    
+                void displayTempHumidity() {
+                    float t = dht.readTemperature(); // Legge la temperatura
+                    float h = dht.readHumidity();    // Legge l'umidità
+                    
+                    lcd.clear();
+                    lcd.setCursor(0, 0);
+                    lcd.print("Temp: " + String(t) + " C");
+                    lcd.setCursor(0, 1);
+                    lcd.print("Umid: " + String(h) + " %");
+                    
+                    delay(2000);
+                }
+                    
+                void displayLuminosity() {
+                    int ldr = analogRead(A0); // Legge il valore del sensore LDR
+                    
+                    lcd.clear();
+                    lcd.setCursor(0, 0);
+                    if (ldr > 200) {
+                        lcd.print("Lum: Buio");
+                    } else if(ldr < 200){
+                        lcd.print("Lum: Luce");
+                    }
+                    
+                    delay(2000);
+                }
+                    
+                void displayRadar() {
+                    lcd.clear();
+                    lcd.setCursor(0, 0);
+                    lcd.print("Scansione...");
+                    
+                    for (pos = 0; pos <= 180; pos += 1) { // Muove il servo da 0 a 180 gradi
+                        myservo.write(pos);
+                    
+                        // Emette il segnale del sensore a ultrasuoni
+                        digitalWrite(trigPin, LOW);
+                        delayMicroseconds(2);
+                        digitalWrite(trigPin, HIGH);
+                        delayMicroseconds(10);
+                        digitalWrite(trigPin, LOW);
+                    
+                        // Calcola la distanza
+                        float duration = pulseIn(echoPin, HIGH, 30000); // Timeout di 30 ms
+                        float distance = duration * 0.034 / 2;
+                    
+                        // Aggiorna il display
+                        lcd.setCursor(0, 1);
+                        lcd.print("                "); // Pulisce la seconda riga
+                        lcd.setCursor(0, 1);
+                        if (distance < 2 || distance > 400) {
+                            lcd.print("Fuori range");
+                        } else {
+                            lcd.print("Dist: " + String(distance) + " cm");
+                        }
+                    
+                        // Stabilizza il movimento
+                        delay(100);
+                    }
+                    
+                        delay(2000); // Piccola pausa alla fine della scansione
+                }
+            </code></pre>
         </div><br><br>
         <div id="footer">
             <div>
