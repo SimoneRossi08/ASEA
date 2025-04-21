@@ -84,23 +84,17 @@ body{
     color: white;
 }
 
-#fotor p{
-    font-size: 16px;
-    line-height: 0.5;
-    color: white;
-    text-align: right;
-    margin-right: 80px;
-}
-
 #footer{
     background-color: rgb(32, 32, 94);
     padding: 20px 0;
+    position: relative;
 }
 #footer h2{
     color: rgb(255, 255, 255);
     font-size: 40px;
     text-align: left;
     margin-left: 50px;
+    display: inline-block;
 }
 
 #credits{
@@ -108,15 +102,15 @@ body{
     font-size: 15px;
     text-align: left;
     left: 200px;
-    bottom: -115px;
+    bottom: 40px;
     line-height: 0.5;
-    position: relative;
+    position: absolute;
 }
 
 #rights{
     color: rgb(255, 255, 255);
     font-size: 20px;
     right: 80px;
-    bottom: -110px;
-    position: relative;
+    bottom: 40px;
+    position: absolute;
 }
