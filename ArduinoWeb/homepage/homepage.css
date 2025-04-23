@@ -26,8 +26,8 @@ body{
 }
 
 #intro{
-    background-image: url('https://via.placeholder.com/1200x800'); /* Aggiungi l'URL dell'immagine di sfondo */
-    background-size: cover; /* Assicura che l'immagine copra tutta la div */
+    background-image: url('https://via.placeholder.com/1200x800');
+    background-size: cover;
     background-position: center;
     color: white;
 }
