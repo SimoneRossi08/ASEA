@@ -25,6 +25,25 @@ body{
     float:left;
 }
 
+#tinker{
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+#circuit{
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+#list{
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
 #code{
     font-family: "Courier New", monospace;
     color: rgb(255, 255, 255);
