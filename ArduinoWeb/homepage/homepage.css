@@ -42,6 +42,13 @@ body{
     margin-left: 70px;
 }
 
+.img img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 #temp p{
     font-size: 16px;
     line-height: 0.5;

@@ -24,9 +24,10 @@ body{
 }
 
 #intro{
-    background-image: url('https://via.placeholder.com/1200x800');
-    background-size: cover;
-    background-position: center;
+    margin: 0 50px 0;
+    background-color: #3a3a3a;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
     color: white;
 }
 #intro p{
@@ -70,7 +71,7 @@ body{
     font-family: "Courier New", monospace;
     color: rgb(255, 255, 255);
     background-color: #3a3a3a;
-    margin: 0 40px;
+    margin: 0 auto;
     padding: 0;
     width: 80%;
     max-width: 800px;
