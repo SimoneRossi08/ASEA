@@ -20,9 +20,9 @@ body{
 #right-panel a{
     color: rgb(255, 255, 255);
     font-size: 25px;
-    margin-left: 1700px;
+    margin-right: 70px;
     margin-top: -39px;
-    float:left;
+    float:right;
 }
 
 #intro{
@@ -31,7 +31,6 @@ body{
     background-position: center;
     color: white;
 }
-
 #intro p{
     font-size: 18px;
     line-height: 0.5;

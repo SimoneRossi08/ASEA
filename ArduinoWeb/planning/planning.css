@@ -9,39 +9,61 @@ body{
     background-color: rgb(32, 32, 94);
     padding: 20px 0;
 }
-
 #navbar h2{
     color: rgb(255, 255, 255);
     font-size: 40px;
     text-align: center;
     margin: 0;
 }
-
 #right-panel a{
     color: rgb(255, 255, 255);
     font-size: 25px;
-    margin-left: 1700px;
+    margin-right: 70px;
     margin-top: -39px;
-    float:left;
+    float:right;
 }
 
-#tinker{
+#intro{
+    background-image: url('https://via.placeholder.com/1200x800');
     background-size: cover;
     background-position: center;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    color: white;
 }
-#circuit{
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+#intro p{
+    font-size: 18px;
+    line-height: 0.5;
+    margin-left: 70px;
 }
+#intro h1{
+    font-size: 50px;
+    line-height: 0.6;
+    margin-left: 70px;
+}
+
+#tinker,
+#circuit,
 #list{
-    background-size: cover;
-    background-position: center;
+    background-color: #3a3a3a;
+    margin: 0 50px 0;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+#tinker img,
+#circuit img{
+    margin: 20px auto 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    width: 50%;
+    height: auto;
+    display: block;
+}
+#list img{
+    margin: 20px auto 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    width: 80%;
+    height: auto;
+    display: block;
 }
 
 #code{
