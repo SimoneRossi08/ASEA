@@ -34,7 +34,7 @@ body{
     padding: 40px 0;
 }
 #intro p{
-    font-size: 18px;
+    font-size: 25px;
     line-height: 0.5;
     margin-left: 70px;
 }
@@ -52,27 +52,27 @@ body{
 }
 
 #temp p{
-    font-size: 16px;
+    font-size: 20px;
     line-height: 0.5;
     margin-left: 80px;
     color: white;
 }
 #temp h2{
-    font-size: 20px;
+    font-size: 30px;
     line-height: 0.6;
     margin-left: 80px;
     color: white;
 }
 
 #umid p{
-    font-size: 16px;
+    font-size: 20px;
     line-height: 0.5;
     color: white;
     text-align: right;
     margin-right: 80px;
 }
 #umid h2{
-    font-size: 20px;
+    font-size: 30px;
     line-height: 0.6;
     color: white;
     text-align: right;
@@ -80,13 +80,13 @@ body{
 }
 
 #radar p{
-    font-size: 16px;
+    font-size: 20px;
     line-height: 0.5;
     margin-left: 80px;
     color: white;
 }
 #radar h2{
-    font-size: 20px;
+    font-size: 30px;
     line-height: 0.6;
     margin-left: 80px;
     color: white;

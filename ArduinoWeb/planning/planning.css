@@ -24,10 +24,6 @@ body{
 }
 
 #intro{
-    margin: 0 50px 0;
-    background-color: #3a3a3a;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
     color: white;
 }
 #intro p{
