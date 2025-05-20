@@ -190,16 +190,21 @@ void displayRadar() {
         lcd.setCursor(0, 1);
         if (distance < 2 || distance > 400 || distance < 0) {
             lcd.print("Fuori range");
-        } else {
+        }
+        else if (distance < 10) { // Se un oggetto è vicino
+            lcd.print("ATTENZIONE! Ostacolo!");
+        }
+        else {
             lcd.print("Dist: " + String(distance) + " cm");
         }
 
         delay(100);
     }
+
     // Movimento indietro
     pos = 180;
-    while (pos >= 0) 
-    {
+    while (pos >= 0) {
+
         myservo.write(pos);
 
         digitalWrite(trigPin, LOW);
@@ -214,12 +219,13 @@ void displayRadar() {
         lcd.setCursor(0, 1);
         lcd.print("                "); // Pulisce la riga
         lcd.setCursor(0, 1);
-        if (distance < 2 || distance > 400 || distance < 0) 
-        {
+        if (distance < 2 || distance > 400 || distance < 0) {
             lcd.print("Fuori range");
-        } 
-        else 
-        {
+        }
+        else if (distance < 10) { // Se un oggetto è vicino
+            lcd.print("ATTENZIONE! Ostacolo!");
+        }
+        else {
             lcd.print("Dist: " + String(distance) + " cm");
         }
 
